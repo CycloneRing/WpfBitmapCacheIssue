@@ -29,6 +29,8 @@ namespace WpfBitmapCacheIssue
 
         private void ActionClick(object sender, RoutedEventArgs e)
         {
+            // Note : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\EnableDebugControl must be set to 1 to make this method work
+
             try
             {
                 Console.WriteLine("Creating MediaControl Gate...");
