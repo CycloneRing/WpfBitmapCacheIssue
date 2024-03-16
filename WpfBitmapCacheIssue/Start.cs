@@ -44,17 +44,6 @@ namespace WpfBitmapCacheIssue
                 BitmapCache bitmapCache = new BitmapCache() { RenderAtScale = 1.0, EnableClearType = true, SnapsToDevicePixels = true };
                 secondWindow.CacheMode = bitmapCache;
 
-                Console.WriteLine("Creating MediaControl Gate...");
-                if (MediaControl.CanControl)
-                {
-                    MediaControl mediaCtrl = MediaControl.Attach(Process.GetCurrentProcess().Id, ClrVersion.V4);
-                    if (mediaCtrl == null) throw new Exception("Failed To Attach.");
-                }
-                else
-                {
-                    throw new Exception("Cannot Control.");
-                }
-
                 Console.WriteLine("Entering Message Loop...");
                 Dispatcher.Run();
             }
