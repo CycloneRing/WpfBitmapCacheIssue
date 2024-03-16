@@ -40,6 +40,8 @@ namespace WpfBitmapCacheIssue
             secondWindow.CacheMode = bitmapCache;
 
             // Fix 1 : Cache First Created Window Will Fix BitmapCache Bug
+            // This is a Bad Fix
+            // It seems First Window Created only receive correct messages after Windows lock
             firstWindow.CacheMode = bitmapCache;
 
             Console.WriteLine("Entering Message Loop...");
