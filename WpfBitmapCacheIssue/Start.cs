@@ -44,6 +44,23 @@ namespace WpfBitmapCacheIssue
                 BitmapCache bitmapCache = new BitmapCache() { RenderAtScale = 1.0, EnableClearType = true, SnapsToDevicePixels = true };
                 secondWindow.CacheMode = bitmapCache;
 
+                // Note : RegKey EnableDebugControl Must Be Set to 1 For MediaControl to Work
+                Console.WriteLine("Creating MediaControl Gate...");
+                if (MediaControl.CanControl)
+                {
+                    MediaControl mediaCtrl = MediaControl.Attach(Process.GetCurrentProcess().Id, ClrVersion.V4);
+                    if (mediaCtrl == null) throw new Exception("Failed To Attach.");
+                    Console.WriteLine("MediaControl Connected.");
+
+                    Console.WriteLine("Configuring Render Engine...");
+                    mediaCtrl.DisableDirtyRegionSupport = true;
+                    Console.WriteLine("Render Engine Config Changed.");
+                }
+                else
+                {
+                    throw new Exception("Cannot Create MediaControl Gate.");
+                }
+
                 Console.WriteLine("Entering Message Loop...");
                 Dispatcher.Run();
             }
