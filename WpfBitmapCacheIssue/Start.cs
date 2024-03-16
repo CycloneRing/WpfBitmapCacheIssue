@@ -39,6 +39,9 @@ namespace WpfBitmapCacheIssue
             BitmapCache bitmapCache = new BitmapCache() { RenderAtScale = 1.0, EnableClearType = true, SnapsToDevicePixels = true };
             secondWindow.CacheMode = bitmapCache;
 
+            // Fix 1 : Cache First Created Window Will Fix BitmapCache Bug
+            firstWindow.CacheMode = bitmapCache;
+
             Console.WriteLine("Entering Message Loop...");
             Dispatcher.Run();
         }
