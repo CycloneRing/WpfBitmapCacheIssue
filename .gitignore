@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Exclude Binaries From Pushes
+./win64
+win64/
+**/win64/
