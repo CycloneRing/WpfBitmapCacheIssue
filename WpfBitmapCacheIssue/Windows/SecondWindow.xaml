@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title=".:: Second Window ::." Height="256" Width="256" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow">
+        Title=".:: Second Window : Alternative ::." Height="256" Width="256" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow">
     <Grid Background="#FF111111">
         <Rectangle Margin="15,15,15,15">
             <Rectangle.Style>

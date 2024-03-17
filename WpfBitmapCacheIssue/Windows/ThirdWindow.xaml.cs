@@ -23,5 +23,14 @@ namespace WpfBitmapCacheIssue
         {
             InitializeComponent();
         }
+
+        private void EnableDirtyRect(object sender, RoutedEventArgs e)
+        {
+    
+        }
+        private void DisableDirtyRect(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

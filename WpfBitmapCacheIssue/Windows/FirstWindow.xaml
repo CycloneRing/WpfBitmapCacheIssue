@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="&lt; First Window &gt;" Height="256" Width="256" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow">
+        Title="&lt; First Window :: Prime &gt;" Height="256" Width="256" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow">
     <Grid Background="#FF111111">
         <Button Content="Action" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Background="#FF262424" BorderBrush="#FFDCED27" Foreground="#FFFFEB2D"/>
     </Grid>
