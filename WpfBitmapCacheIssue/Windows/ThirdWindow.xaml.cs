@@ -27,9 +27,21 @@ namespace WpfBitmapCacheIssue
             InitializeComponent();
         }
 
-        private void ActionClick(object sender, RoutedEventArgs e)
+        private void EnableDirtyRect(object sender, RoutedEventArgs e)
         {
-            
+            if (WpfProgram.mediaCtrl != null)
+            {
+                WpfProgram.mediaCtrl.DisableDirtyRegionSupport = false;
+                Console.WriteLine(" * DisableDirtyRegionSupport Set to False");
+            }
+        }
+        private void DisableDirtyRect(object sender, RoutedEventArgs e)
+        {
+            if (WpfProgram.mediaCtrl != null)
+            {
+                WpfProgram.mediaCtrl.DisableDirtyRegionSupport = true;
+                Console.WriteLine(" * DisableDirtyRegionSupport Set to True");
+            }
         }
     }
 }

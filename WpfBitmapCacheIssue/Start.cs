@@ -14,6 +14,8 @@ namespace WpfBitmapCacheIssue
 {
     internal class WpfProgram
     {
+        static public MediaControl mediaCtrl = null;
+
         [STAThread]
         static void Main(string[] args)
         {
@@ -48,7 +50,7 @@ namespace WpfBitmapCacheIssue
                 Console.WriteLine("Creating MediaControl Gate...");
                 if (MediaControl.CanControl)
                 {
-                    MediaControl mediaCtrl = MediaControl.Attach(Process.GetCurrentProcess().Id, ClrVersion.V4);
+                    mediaCtrl = MediaControl.Attach(Process.GetCurrentProcess().Id, ClrVersion.V4);
                     if (mediaCtrl == null) throw new Exception("Failed To Attach.");
                     Console.WriteLine("MediaControl Connected.");
 
