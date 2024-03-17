@@ -366,3 +366,4 @@ FodyWeavers.xsd
 ./win64
 win64/
 **/win64/
+/WpfBitmapCacheIssue/Tools/wpfgfx_v0400_Patched.dll
